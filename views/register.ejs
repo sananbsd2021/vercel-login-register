@@ -1,1 +1,21 @@
+<%- include('layouts/layout') %>
+
+<h1 class="text-center text-2xl font-semibold">Register</h1>
+<form action="/register" method="POST" class="max-w-md mx-auto mt-4 p-4 bg-white shadow rounded">
+  <div class="mb-4">
+    <label for="username" class="block text-sm">Username</label>
+    <input type="text" name="username" id="username" required class="w-full p-2 mt-1 border border-gray-300 rounded">
+  </div>
+  <div class="mb-4">
+    <label for="password" class="block text-sm">Password</label>
+    <input type="password" name="password" id="password" required class="w-full p-2 mt-1 border border-gray-300 rounded">
+  </div>
+  <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded">Register</button>
+  <p class="mt-4 text-center">
+    Already have an account? <a href="/" class="text-blue-500">Login</a>
+  </p>
+</form>
+<% if (message) { %>
+  <p class="text-center text-red-500 mt-4"><%= message %></p>
+<% } %>
 
